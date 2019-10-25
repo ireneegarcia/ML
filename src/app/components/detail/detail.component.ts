@@ -25,7 +25,6 @@ export class DetailComponent implements OnInit {
       .subscribe((resp: ItemsModel) => {
         this.listCategories = resp.categories;
         this.listItems = resp.items;
-        console.log(resp);
       });
   }
 

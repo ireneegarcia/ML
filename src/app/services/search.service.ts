@@ -4,6 +4,7 @@ import { ItemsModel } from '../models/items.model';
 import { ItemModel } from '../models/item.mode';
 import { Observable } from 'rxjs/internal/Observable';
 import { environment } from 'src/environments/environment';
+import { AuthorModel } from '../models/author.model';
 
 @Injectable({
   providedIn: 'root'
@@ -22,6 +23,12 @@ export class SearchService {
   getItems(query: string): Observable<ItemsModel> {
     const url = `${this.urlBase}${environment.services_search_items}?query=${query}`;
     return this.http.get<ItemsModel>(url);
+
+  }
+
+  getAuthor(): Observable<AuthorModel> {
+    const url = `${this.urlBase}${environment.services_get_author}`;
+    return this.http.get<AuthorModel>(url);
 
   }
 }

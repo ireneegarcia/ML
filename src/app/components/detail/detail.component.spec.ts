@@ -4,7 +4,7 @@ import { DetailComponent } from './detail.component';
 import { ThousandsPipe } from 'src/app/shared/pipe/thousandsPipe';
 import { HttpClientModule, HttpClient, HttpHandler } from '@angular/common/http';
 import { SearchService } from 'src/app/services/search.service';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 

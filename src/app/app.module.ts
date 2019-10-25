@@ -19,6 +19,7 @@ import { DetailComponent } from './components/detail/detail.component';
 // Pipe
 import { ThousandsPipe } from './shared/pipe/thousandsPipe';
 import { RouterModule } from '@angular/router';
+import { FooterComponent } from './components/shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { RouterModule } from '@angular/router';
     HomeComponent,
     SearchComponent,
     DetailComponent,
-    ThousandsPipe
+    ThousandsPipe,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

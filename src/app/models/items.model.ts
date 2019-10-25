@@ -1,11 +1,9 @@
 import { ItemModel } from './item.mode';
+import { AuthorModel } from './author.model';
 
 export class ItemsModel implements IItemsModel {
 
-  author: {
-    name: string,
-    lastname: string
-  };
+  author: AuthorModel;
   categories: string[];
   items: ItemModel[] | undefined;
 
@@ -29,10 +27,7 @@ export class ItemsModel implements IItemsModel {
 }
 
 export interface IItemsModel {
-  author: {
-    name: string,
-    lastname: string
-  };
+  author: AuthorModel;
   categories: string[];
   items: ItemModel[];
 }

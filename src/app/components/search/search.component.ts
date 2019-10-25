@@ -31,7 +31,7 @@ export class SearchComponent implements OnInit {
         .subscribe((resp: ItemsModel) => {
           this.listItems = resp.items;
           this.listCategories = resp.categories;
-          console.log(this.listItems);
+          console.log(resp);
         });
     });
 
