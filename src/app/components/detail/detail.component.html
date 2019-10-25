@@ -1,0 +1,32 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb margin-auto">
+        <li *ngFor="let category of listCategories; let i = index" class="breadcrumb-item">
+            <a *ngIf="(i + 1) !== listCategories.length" class="breadcrumb-color" href="#">{{category}}</a>
+            <a *ngIf="(i + 1) === listCategories.length" class="breadcrumb-color" href="#">
+                <strong>{{category}}</strong>
+            </a>
+        </li>
+    </ol>
+</nav>
+
+<div *ngIf="listItems && listItems.length !== 0" class="container background-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="col-8 display-inline" *ngIf="listItems && listItems.length !== 0">
+                    <img src="{{listItems.picture}}" class="img-size border-image" alt="item">
+                </div>
+                <div class="col-4 display-inline">
+                    <p class="font-size-14 padding-top-32"> {{listItems.condition}} - {{listItems.sold_quantity}} vendidos</p>
+                    <p class="font-size-24 margin-top"> {{listItems.title}} </p>
+                    <p class="font-size-46 padding-top-32 padding-bottom-32"> ${{listItems.price.amount | thousandsPipe}}</p>
+                    <button type="button" class="btn buy-button btn-lg btn-block">Comprar</button>
+                </div>
+            </div>
+            <div class="col-8 padding-left-32">
+                <p class="font-size-28">Descripción del producto</p>
+                <p class="font-size-16 description-text padding-bottom-32 padding-top-32">{{listItems.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>

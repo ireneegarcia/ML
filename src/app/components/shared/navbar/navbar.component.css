@@ -1,0 +1,34 @@
+:hover {
+    outline: 0;
+}
+
+.input-search-icon {
+    background-color: #EEEEEE;
+}
+
+.text-search-size {
+    font-size: 18px;
+    box-shadow: none;
+}
+
+.width-100 {
+    width: 100%
+}
+
+.navbar-position {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.search-position {
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 74px 0 74px;
+}
+
+.form-position {
+    display: inline-block;
+    width: 100%;
+}

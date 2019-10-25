@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-light navbar-position">
+    <div class="row search-position">
+        <div class="col-1">
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/Logo_ML.png" alt="">
+            </a>
+        </div>
+        <div class="col-11">
+            <div class="collapse navbar-collapse form-position" id="navbarSupportedContent">
+                <form class="form-inline my-2 my-lg-0">
+                    <div class="input-group width-100">
+                        <input type="text" [(ngModel)]="textSearch" name="search" class="form-control text-search-size" placeholder="Nunca dejes de buscar" aria-label="Nunca dejes de buscar" aria-describedby="basic-addon2">
+                        <div class="input-group-append" [routerLink]="['/items']" [queryParams]="{'search': textSearch}" (click)="searchItem()">
+                            <span class="input-group-text input-search-icon " id="basic-addon2 ">
+                                <img src="assets/img/ic_Search.png " alt=" ">
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</nav>
